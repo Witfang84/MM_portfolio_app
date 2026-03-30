@@ -1,0 +1,14 @@
+.front {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-tile-front);
+  border-radius: var(--tile-radius);
+  box-shadow: inset 0 0 0 1px var(--color-tile-front-edge);
+  transition: box-shadow var(--flip-duration) var(--flip-easing);
+}
+
+.front:hover {
+  box-shadow:
+    inset 0 0 0 1px var(--color-tile-front-edge),
+    0 4px 12px rgba(0, 0, 0, 0.35);
+}

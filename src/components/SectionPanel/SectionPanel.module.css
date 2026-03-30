@@ -1,0 +1,148 @@
+/* Overlay behind the panel */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.overlay.visible {
+  opacity: 1;
+}
+
+/* Panel — desktop: right slide-in */
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--panel-width);
+  height: 100%;
+  background: var(--panel-bg);
+  border-left: 1px solid var(--panel-border);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.panel.visible {
+  transform: translateX(0);
+}
+
+/* Mobile: bottom sheet */
+@media (max-width: 768px) {
+  .panel {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 75%;
+    border-left: none;
+    border-top: 1px solid var(--panel-border);
+    transform: translateY(100%);
+  }
+
+  .panel.visible {
+    transform: translateY(0);
+  }
+}
+
+/* Panel content */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px 32px 0;
+  gap: 16px;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--section-color, #2C2C2C);
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--color-tile-front);
+  line-height: 1.1;
+}
+
+.closeBtn {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid var(--color-tile-front);
+  width: 36px;
+  height: 36px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--color-tile-front);
+  transition: background 150ms ease, color 150ms ease;
+  line-height: 1;
+}
+
+.closeBtn:hover {
+  background: var(--color-tile-front);
+  color: var(--color-bg);
+}
+
+.divider {
+  margin: 24px 32px;
+  height: 1px;
+  background: var(--color-tile-front);
+  opacity: 0.15;
+}
+
+.body {
+  padding: 0 32px 32px;
+  flex: 1;
+}
+
+.description {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-tile-front);
+  opacity: 0.45;
+  margin-bottom: 16px;
+}
+
+.content {
+  font-family: var(--font-sans);
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--color-tile-front);
+}
+
+/* Accent bar at top of panel */
+.accentBar {
+  height: 3px;
+  background: var(--section-color, #2C2C2C);
+  flex-shrink: 0;
+}

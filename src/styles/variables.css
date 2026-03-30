@@ -1,0 +1,33 @@
+:root {
+  /* Colors */
+  --color-bg: #F8F7F3;
+  --color-tile-front: #2C2C2C;
+  --color-tile-front-edge: rgba(255, 255, 255, 0.08);
+  --color-tile-back: #1e1e1e;
+  --color-gap: #F8F7F3;
+  --color-text-on-dark: #F8F7F3;
+  --color-overlay: rgba(248, 247, 243, 0.6);
+
+  /* Panel */
+  --panel-width: 40%;
+  --panel-bg: #F8F7F3;
+  --panel-border: #2C2C2C;
+
+  /* Grid */
+  --grid-cols: 7;
+  --grid-gap: 3px;
+  --tile-size: clamp(36px, 9vw, 88px);
+  --tile-radius: 2px;
+
+  /* Flip animation */
+  --flip-duration: 600ms;
+  --flip-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Load animation */
+  --load-duration: 400ms;
+  --load-stagger: 30ms;
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
