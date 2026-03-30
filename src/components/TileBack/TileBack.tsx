@@ -18,8 +18,7 @@ export function TileBack({ sectionId, onSectionSelect }: TileBackProps) {
     <div
       className={styles.back}
       style={{ '--accent-color': section.color } as React.CSSProperties}
-      onClick={(e) => {
-        e.stopPropagation();
+      onClick={() => {
         onSectionSelect(sectionId);
       }}
       role="button"
