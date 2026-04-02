@@ -10,9 +10,13 @@
 }
 
 html,
-body,
-#root {
+body {
   height: 100%;
+  width: 100%;
+}
+
+#root {
+  min-height: 100%;
   width: 100%;
 }
 
@@ -22,7 +26,7 @@ body {
   color: var(--color-tile-front);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

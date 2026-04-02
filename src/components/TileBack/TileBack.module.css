@@ -14,7 +14,7 @@
   font-weight: 600;
   font-size: clamp(14px, 3.5vw, 36px);
   line-height: 1;
-  color: var(--accent-color, #F8F7F3);
+  color: #2DCEAE;
   user-select: none;
   transition: transform 150ms ease;
 }

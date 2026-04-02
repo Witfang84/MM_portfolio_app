@@ -37,7 +37,7 @@ export function Tile({ cell, onSectionSelect }: TileProps) {
         }
       >
         <div className={`${styles.face} ${styles.faceFront}`}>
-          <TileFront />
+          <TileFront hasSection={!!cell.sectionId} />
         </div>
         <div className={`${styles.face} ${styles.faceBack}`}>
           <TileBack sectionId={cell.sectionId} onSectionSelect={onSectionSelect} />

@@ -14,7 +14,7 @@
   --panel-border: #2C2C2C;
 
   /* Grid */
-  --grid-cols: 7;
+  --grid-cols: 6;
   --grid-gap: 3px;
   --tile-size: clamp(36px, 9vw, 88px);
   --tile-radius: 2px;
