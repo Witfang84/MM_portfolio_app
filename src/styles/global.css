@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&family=Work+Sans:wght@300;400;500&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
 @import './variables.css';
 
 *,
@@ -22,8 +22,8 @@ body {
 
 body {
   background-color: var(--color-bg);
-  font-family: var(--font-sans);
-  color: var(--color-tile-front);
+  font-family: var(--font-body);
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: auto;

@@ -1,33 +1,58 @@
 :root {
+  /* ── Bold Badges Design System ── */
+
   /* Colors */
-  --color-bg: #F8F7F3;
-  --color-tile-front: #2C2C2C;
-  --color-tile-front-edge: rgba(255, 255, 255, 0.08);
-  --color-tile-back: #1e1e1e;
-  --color-gap: #F8F7F3;
-  --color-text-on-dark: #F8F7F3;
-  --color-overlay: rgba(248, 247, 243, 0.6);
+  --color-bg: #ffffff;
+  --color-surface: #f6f6f6;
+  --color-surface-container: #e8e8e8;
+
+  --color-ink: #0e0e0e;
+  --color-ink-mid: rgba(14, 14, 14, 0.45);
+
+  --color-primary: #fdec00;           /* yellow – primary_container */
+  --color-secondary: #006a26;         /* green */
+  --color-secondary-container: #b6f0cb;
+  --color-tertiary: #ac0088;          /* pink */
+  --color-tertiary-fixed: #ffd7f2;
+
+  /* Tile */
+  --color-tile-front: #0e0e0e;
+  --color-tile-back: #0e0e0e;
+  --color-tile-text: #fdec00;         /* yellow on dark tile */
+
+  /* Overlay */
+  --color-overlay: rgba(14, 14, 14, 0.35);
 
   /* Panel */
   --panel-width: 40%;
-  --panel-bg: #F8F7F3;
-  --panel-border: #2C2C2C;
+  --panel-bg: #ffffff;
+  --panel-border: #0e0e0e;
 
   /* Grid */
   --grid-cols: 6;
-  --grid-gap: 3px;
+  --grid-gap: 4px;
   --tile-size: clamp(36px, 9vw, 88px);
-  --tile-radius: 2px;
+  --tile-radius: 0px;                 /* sharp corners – no border-radius */
+
+  /* Border weights */
+  --border-heavy: 4px;
+  --border-medium: 3px;
+  --border-light: 2px;
+
+  /* Hard-shadow offset */
+  --shadow-offset: 6px;
 
   /* Flip animation */
-  --flip-duration: 600ms;
+  --flip-duration: 500ms;
   --flip-easing: cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Load animation */
-  --load-duration: 400ms;
-  --load-stagger: 30ms;
+  --load-duration: 350ms;
+  --load-stagger: 25ms;
 
   /* Typography */
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Work Sans', system-ui, sans-serif;
+  --font-label: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }

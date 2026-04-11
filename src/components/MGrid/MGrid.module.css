@@ -5,22 +5,9 @@
   perspective: 1200px;
 }
 
-.gridWrapper {
-  position: relative;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(var(--grid-cols), var(--tile-size));
   grid-template-rows: repeat(auto-fill, var(--tile-size));
   gap: var(--grid-gap);
-}
-
-.label {
-  position: absolute;
-  font-size: 13px;
-  font-weight: 400;
-  white-space: nowrap;
-  color: var(--color-tile-front);
-  pointer-events: none;
 }
